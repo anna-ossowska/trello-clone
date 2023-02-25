@@ -1,0 +1,29 @@
+:root {
+  /* Basic colors */
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Background colors */
+  --color-background-default: #0079bf;
+  --color-background-paper: #fff;
+
+  /* Primary colors*/
+  --color-primary-main: #3d8cba;
+  --color-primary-light: #dadbe2;
+
+  /* Text colors*/
+  --color-text-main: #2c2f38;
+  --color-text-light: #fff;
+
+  /* Font */
+  --font-family-primary: 'Roboto', sans-serif;
+
+  /* Border radius */
+  --border-radius: 4px;
+
+  /* Z-indexes */
+  --navbar-z-index: 1000;
+
+  /* Components */
+  --navbar-height: 100px;
+}
