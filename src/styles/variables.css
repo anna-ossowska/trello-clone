@@ -12,8 +12,8 @@
   --color-primary-light: #dadbe2;
 
   /* Text colors*/
-  --color-text-main: #2c2f38;
-  --color-text-light: #fff;
+  --color-text-dark: #2c2f38;
+  --color-text-light: #e3e4eb;
 
   /* Font */
   --font-family-primary: 'Roboto', sans-serif;
@@ -25,5 +25,9 @@
   --navbar-z-index: 1000;
 
   /* Components */
-  --navbar-height: 100px;
+  --navbar-height: 50px;
+
+  /* Shadow */
+  --box-shadow: 1px 38px 182px 27px;
+  --color-shadow: rgba(0, 0, 0, 0.27);
 }

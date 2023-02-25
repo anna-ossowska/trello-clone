@@ -1,5 +1,11 @@
-function App() {
-  return <div>Trello Clone</div>;
-}
+import { Navbar } from './components/index';
+
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
+};
 
 export default App;
