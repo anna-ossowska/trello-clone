@@ -1,9 +1,10 @@
-import { Navbar } from './components/index';
+import { Board, Navbar } from './components/index';
 
 const App = () => {
   return (
     <div>
       <Navbar />
+      <Board />
     </div>
   );
 };

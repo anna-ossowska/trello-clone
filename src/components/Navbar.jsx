@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledContainer = styled.div`
   background: var(--color-background-default);
   height: var(--navbar-height);
-  border-bottom: solid 1px var(--color-primary-main);
+  border-bottom: solid 1px var(--color-secondary-main);
   box-shadow: var(--box-shadow) var(--color-shadow);
   display: flex;
   justify-content: center;
