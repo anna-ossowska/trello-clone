@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { CloseIcon } from '../assets/icons';
+import { BoardContext } from '../contexts/BoardContext';
+import { nanoid } from 'nanoid';
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -26,15 +28,30 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-const AddListButton = ({ title, setIsAddListOpen }) => {
-  const handleClick = () => {
+const AddListButton = ({ title, setIsAddListOpen, enteredlistTitle }) => {
+  const { dispatch } = useContext(BoardContext);
+  const handleClose = () => {
+    setIsAddListOpen(false);
+  };
+
+  const handleAddList = () => {
+    dispatch({
+      type: 'ADD_LIST',
+      payload: { listId: nanoid(), listTitle: enteredlistTitle },
+    });
+
     setIsAddListOpen(false);
   };
 
   return (
     <ButtonContainer>
-      <StyledButton>{title}</StyledButton>
-      <CloseButton onClick={handleClick}>
+      <StyledButton
+        onClick={handleAddList}
+        disabled={enteredlistTitle.length === 0}
+      >
+        {title}
+      </StyledButton>
+      <CloseButton onClick={handleClose}>
         <CloseIcon />
       </CloseButton>
     </ButtonContainer>

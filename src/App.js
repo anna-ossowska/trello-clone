@@ -1,11 +1,14 @@
 import { Board, Navbar } from './components/index';
+import BoardContextProvider from './contexts/BoardContext';
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Board />
-    </div>
+    <BoardContextProvider>
+      <div>
+        <Navbar />
+        <Board />
+      </div>
+    </BoardContextProvider>
   );
 };
 
