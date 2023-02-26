@@ -53,14 +53,14 @@ const StyledTextareaAutosize = styled(TextareaAutosize)`
 
 const AddList = () => {
   const [isAddListOpen, setIsAddListOpen] = useState(false);
-  const [enteredlistTitle, setEnteredListTile] = useState('');
+  const [enteredlistTitle, setEnteredlistTitle] = useState('');
 
   const handleAddList = () => {
     setIsAddListOpen(true);
   };
 
   const handleChangeText = (e) => {
-    setEnteredListTile(e.target.value);
+    setEnteredlistTitle(e.target.value);
   };
 
   return (
@@ -84,6 +84,7 @@ const AddList = () => {
             <AddListButton
               title="Add list"
               setIsAddListOpen={setIsAddListOpen}
+              setEnteredlistTitle={setEnteredlistTitle}
               enteredlistTitle={enteredlistTitle}
             />
           </AddListEditor>

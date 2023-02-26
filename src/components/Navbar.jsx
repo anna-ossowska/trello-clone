@@ -9,6 +9,7 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 
   & h2 {
     line-height: 20px;

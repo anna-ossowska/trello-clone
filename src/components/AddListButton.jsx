@@ -28,7 +28,12 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-const AddListButton = ({ title, setIsAddListOpen, enteredlistTitle }) => {
+const AddListButton = ({
+  title,
+  setIsAddListOpen,
+  enteredlistTitle,
+  setEnteredListTitle,
+}) => {
   const { dispatch } = useContext(BoardContext);
   const handleClose = () => {
     setIsAddListOpen(false);
@@ -41,6 +46,7 @@ const AddListButton = ({ title, setIsAddListOpen, enteredlistTitle }) => {
     });
 
     setIsAddListOpen(false);
+    setEnteredListTitle('');
   };
 
   return (

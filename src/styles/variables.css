@@ -10,11 +10,13 @@
   /* Primary colors*/
   --color-primary-main: #0079bf;
   --color-primary-light: #dadbe2;
+  --color-primary-light-hover: #c6c6c9;
   --color-secondary-main: #3d8cba;
   --color-secondary-main-hover: #4394c4;
 
   /* Text colors*/
-  --color-text-dark: #2c2f38;
+  --color-text-dark: #292c33;
+  --color-text-semi-dark: #3e3e3f;
   --color-text-light: #ffffff;
 
   /* Font */
