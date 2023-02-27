@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 import styled from 'styled-components';
 import { PlusIcon } from '../assets/icons';
-import { AddListButton } from './index';
+import { AddButton } from './index';
 
 const AddListRegularView = styled.div`
   background: var(--color-secondary-main);
@@ -11,7 +11,6 @@ const AddListRegularView = styled.div`
   color: var(--color-text-light);
   padding: 7px 10px;
   cursor: pointer;
-  transition: background var(--custom-transition);
 
   &:hover {
     background: var(--color-secondary-main-hover);
@@ -27,20 +26,20 @@ const Wrapper = styled.div`
 const AddListEditor = styled.div`
   background: var(--color-primary-light);
   border-radius: var(--border-radius);
-  padding: 4px;
   min-width: var(--card-width);
   max-width: var(--card-width);
+  padding: 4px;
   transition: height 0.5s ease-in;
 `;
 
 const StyledTextareaAutosize = styled(TextareaAutosize)`
-  padding: 7px 10px;
   width: 100%;
   height: 36px;
+  padding: 7px 10px;
+  font-size: 16px;
   resize: none;
-  font-size: 14px;
-  font-family: var(--font-family-primary);
   overflow: hidden;
+  font-family: var(--font-family-primary);
   border: 2px solid var(--color-primary-main);
   border-radius: var(--border-radius);
 
@@ -52,20 +51,20 @@ const StyledTextareaAutosize = styled(TextareaAutosize)`
 `;
 
 const AddList = () => {
-  const [isAddListOpen, setIsAddListOpen] = useState(false);
-  const [enteredlistTitle, setEnteredlistTitle] = useState('');
+  const [isElementOpen, setIsElementOpen] = useState(false);
+  const [enteredTitle, setEnteredTitle] = useState('');
 
   const handleAddList = () => {
-    setIsAddListOpen(true);
+    setIsElementOpen(true);
   };
 
   const handleChangeText = (e) => {
-    setEnteredlistTitle(e.target.value);
+    setEnteredTitle(e.target.value);
   };
 
   return (
     <div>
-      {!isAddListOpen && (
+      {!isElementOpen && (
         <AddListRegularView onClick={handleAddList}>
           <Wrapper>
             <PlusIcon />
@@ -74,21 +73,23 @@ const AddList = () => {
         </AddListRegularView>
       )}
 
-      {isAddListOpen && (
-        <div>
+      {isElementOpen && (
+        <>
           <AddListEditor>
             <StyledTextareaAutosize
+              autoFocus
               placeholder="Enter list title..."
               onChange={handleChangeText}
             />
-            <AddListButton
+            <AddButton
+              elementType="list"
               title="Add list"
-              setIsAddListOpen={setIsAddListOpen}
-              setEnteredlistTitle={setEnteredlistTitle}
-              enteredlistTitle={enteredlistTitle}
+              setIsElementOpen={setIsElementOpen}
+              setEnteredTitle={setEnteredTitle}
+              enteredTitle={enteredTitle}
             />
           </AddListEditor>
-        </div>
+        </>
       )}
     </div>
   );

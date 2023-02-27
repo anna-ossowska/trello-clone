@@ -1,5 +1,5 @@
 import { createContext, useReducer, useEffect } from 'react';
-import { boardReducer } from '../reducers/BoardReducer';
+import { boardReducer } from '../reducers/boardReducer';
 
 export const BoardContext = createContext();
 
@@ -13,11 +13,7 @@ const BoardContextProvider = (props) => {
     localStorage.setItem('lists', JSON.stringify(lists));
   }, [lists]);
 
-  return (
-    <BoardContext.Provider value={{ lists, dispatch }}>
-      {props.children}
-    </BoardContext.Provider>
-  );
+  return <BoardContext.Provider value={{ lists, dispatch }}>{props.children}</BoardContext.Provider>;
 };
 
 export default BoardContextProvider;

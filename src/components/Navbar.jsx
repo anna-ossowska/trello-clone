@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledContainer = styled.div`
-  background: var(--color-background-default);
   height: var(--navbar-height);
   border-bottom: solid 1px var(--color-secondary-main);
+  background: var(--color-background-default);
   box-shadow: var(--box-shadow) var(--color-shadow);
   display: flex;
   justify-content: center;

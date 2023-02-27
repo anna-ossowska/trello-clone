@@ -13,7 +13,7 @@ const BoardContainer = styled.div`
 // TODO Create draggable logic here
 const Board = () => {
   const { lists } = useContext(BoardContext);
-  console.log('lists', lists);
+
   return (
     <BoardContainer>
       {lists.map(({ listId, listTitle, cards }, index) => {

@@ -5,7 +5,7 @@
 
   /* Background colors */
   --color-background-default: #0079bf;
-  --color-background-paper: #fff;
+  --color-background-paper: #f0f0f0;
 
   /* Primary colors*/
   --color-primary-main: #0079bf;
@@ -35,6 +35,7 @@
   /* Shadow */
   --box-shadow: 1px 38px 182px 27px;
   --color-shadow: rgba(0, 0, 0, 0.27);
+  --box-shadow-card: 0 1.5px 0px rgba(0, 0, 0, 0.15);
 
   /* Transition */
   --custom-transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
